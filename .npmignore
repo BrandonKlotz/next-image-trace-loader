@@ -3,3 +3,5 @@ node_modules/
 .babelrc
 package.json
 example/
+images/
+README.md

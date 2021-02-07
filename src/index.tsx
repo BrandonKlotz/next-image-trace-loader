@@ -4,32 +4,45 @@ import Image from 'next/image';
 type ImageTraceProps = {
   src: string,
   trace: string,
+  delay?: string,
+  width?: string,
+  height?: string,
   nextImageProps?: any
 }
 
-function ImageTrace({ src, trace, nextImageProps }: ImageTraceProps) {
+function ImageTrace({ src, trace, delay='0.5s', width='auto', height='auto', nextImageProps }: ImageTraceProps) {
   const [imageLoaded, setImageLoaded] = React.useState(false);
 
   return (
     <div style={{ position: 'relative', left: 0, top: 0 }}>
-      <div style={{
-        opacity: imageLoaded ? 1 : 0,
-        transition: 'opacity 0.5s ease',
-        position: 'absolute'
-      }}>
+      <div
+        style={{
+          width: width,
+          height: height,
+          opacity: imageLoaded ? 1 : 0,
+          transition: `opacity ${delay} ease`,
+          position: 'absolute'
+        }}
+      >
         <Image
           src={src}
           loading="lazy"
           onLoad={() => setImageLoaded(true)}
-          {...nextImageProps} />
+          {...nextImageProps} 
+        />
       </div>
-      <div style={{
-        transition: 'opacity 0.5s ease',
-        opacity: imageLoaded ? 0 : 1,
-      }}>
+      <div 
+        style={{
+          width: width,
+          height: height,
+          transition: `opacity ${delay} ease`,
+          opacity: imageLoaded ? 0 : 1,
+        }}
+      >
         <Image
           src={trace}
-          {...nextImageProps} />
+          {...nextImageProps} 
+        />
       </div>
     </div>
   );
