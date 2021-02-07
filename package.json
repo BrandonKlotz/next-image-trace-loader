@@ -1,10 +1,15 @@
 {
-  "name": "next-image-trace",
+  "name": "next-image-trace-loader",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build": "rollup -c",
+    "start": "rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -17,12 +22,34 @@
     "next-image-trace",
     "svg",
     "traced",
-    "image"
+    "image",
+    "plugin",
+    "react"
   ],
-  "author": "BrandonKlotz",
+  "author": "Brandon Klotz",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BrandonKlotz/next-image-trace/issues"
   },
-  "homepage": "https://github.com/BrandonKlotz/next-image-trace#readme"
+  "homepage": "https://github.com/BrandonKlotz/next-image-trace#readme",
+  "dependencies": {
+    "file-loader": "^6.2.0",
+    "image-trace-loader": "^1.0.2",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.1",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "eslint": "^7.19.0",
+    "next": "^10.0.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rollup": "^1.29.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "typescript": "^2.8.3"
+  },
+  "files": [
+    "dist"
+  ]
 }
