@@ -4,13 +4,20 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #111f1d;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.rounded {
+  border-radius: 40em;
 }
 
-* {
-  box-sizing: border-box;
+.example {
+  margin: 0 auto;
+  padding: 2em;
+  width: 60%;
+  height: 2000px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
 }
