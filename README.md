@@ -13,8 +13,6 @@ Was truly inspired by Gatsby sites that use [Image Trace](https://using-gatsby-i
 
 ## Example
 
-![Example Gif](https://raw.githubusercontent.com/BrandonKlotz/next-image-trace-loader/main/images/example.gif)
-
 View site:
 https://next-image-trace-loader.vercel.app/
 
