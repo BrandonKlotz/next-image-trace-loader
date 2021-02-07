@@ -1,0 +1,28 @@
+{
+  "name": "next-image-trace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonKlotz/next-image-trace.git"
+  },
+  "keywords": [
+    "next",
+    "nextjs",
+    "image-trace-loader",
+    "next-image-trace",
+    "svg",
+    "traced",
+    "image"
+  ],
+  "author": "BrandonKlotz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrandonKlotz/next-image-trace/issues"
+  },
+  "homepage": "https://github.com/BrandonKlotz/next-image-trace#readme"
+}
