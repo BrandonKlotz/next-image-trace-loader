@@ -2103,10 +2103,10 @@ native-url@0.3.4:
   dependencies:
     querystring "^0.2.0"
 
-next-image-trace-loader@1.1.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/next-image-trace-loader/-/next-image-trace-loader-1.0.1.tgz#fc8f6a765dea5c4157d68af4f5f8aed5a7120180"
-  integrity sha512-B0L7fb+N+KXtcn+NOIbsmMJ5zrx9WmwGQUfZ98q2g9/dfwGZ4euBXoe7jIRKPwRwQXLeqtHD2wh58UgwTCliDA==
+next-image-trace-loader@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/next-image-trace-loader/-/next-image-trace-loader-1.1.3.tgz#6fc4c6a7107d720d55fd5acfc55e586f10862ffb"
+  integrity sha512-qy80hPKSO5O8M7iaf/RO/ZMDj1AsqYy3XRcyjPF3C4Q2g9QyCczj+1Fed2lhbzxXGDo2krAMqb/KcDFicHhomA==
   dependencies:
     file-loader "^6.2.0"
     image-trace-loader "^1.0.2"
