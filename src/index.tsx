@@ -15,16 +15,15 @@ function ImageTrace({ src, trace, delay='0.5s', width='auto', height='auto', nex
   const defaultStyles = {
     width: width,
     height: height,
-    opacity: imageLoaded ? 0 : 1,
     transition: `opacity ${delay} ease`
   };
 
   return (
     <div style={{ position: 'relative', left: 0, top: 0 }}>
-      <div style={{ ...defaultStyles, ...{ position: 'absolute' }}}>
+      <div style={{ ...defaultStyles, ...{ position: 'absolute', opacity: imageLoaded ? 1 : 0 }}}>
         <Image src={src} onLoad={() => setImageLoaded(true)} {...nextImageProps} />
       </div>
-      <div style={defaultStyles}>
+      <div style={{...defaultStyles, ...{ opacity: imageLoaded ? 0 : 1 }}}>
         <Image src={trace} {...nextImageProps} />
       </div>
     </div>
