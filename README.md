@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/stable-1.1.3-blue)
+![Version](https://img.shields.io/badge/stable-1.1.4-blue)
 [![Downloads](https://img.shields.io/npm/dm/next-image-trace-loader.svg)](http://npm-stat.com/charts.html?package=next-image-trace-loader&from=2015-08-01)
 [![MIT License](https://img.shields.io/npm/l/next-image-trace-loader.svg)](http://opensource.org/licenses/MIT)
 
