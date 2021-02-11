@@ -12,37 +12,20 @@ type ImageTraceProps = {
 
 function ImageTrace({ src, trace, delay='0.5s', width='auto', height='auto', nextImageProps }: ImageTraceProps) {
   const [imageLoaded, setImageLoaded] = React.useState(false);
+  const defaultStyles = {
+    width: width,
+    height: height,
+    opacity: imageLoaded ? 0 : 1,
+    transition: `opacity ${delay} ease`
+  };
 
   return (
     <div style={{ position: 'relative', left: 0, top: 0 }}>
-      <div
-        style={{
-          width: width,
-          height: height,
-          opacity: imageLoaded ? 1 : 0,
-          transition: `opacity ${delay} ease`,
-          position: 'absolute'
-        }}
-      >
-        <Image
-          src={src}
-          loading="lazy"
-          onLoad={() => setImageLoaded(true)}
-          {...nextImageProps} 
-        />
+      <div style={{ ...defaultStyles, ...{ position: 'absolute' }}}>
+        <Image src={src} onLoad={() => setImageLoaded(true)} {...nextImageProps} />
       </div>
-      <div 
-        style={{
-          width: width,
-          height: height,
-          transition: `opacity ${delay} ease`,
-          opacity: imageLoaded ? 0 : 1,
-        }}
-      >
-        <Image
-          src={trace}
-          {...nextImageProps} 
-        />
+      <div style={defaultStyles}>
+        <Image src={trace} {...nextImageProps} />
       </div>
     </div>
   );

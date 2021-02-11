@@ -1,4 +1,6 @@
-[![NPM version][npm-image]][npm-url]
+![Version](https://img.shields.io/badge/version-1.0.1-blue)
+[![Downloads](https://img.shields.io/npm/dm/next-image-trace-loader.svg)](http://npm-stat.com/charts.html?package=next-image-trace-loader&from=2015-08-01)
+[![MIT License](https://img.shields.io/npm/l/next-image-trace-loader.svg)](http://opensource.org/licenses/MIT)
 
 # Next Image Trace Loader
 
@@ -11,6 +13,8 @@ Was truly inspired by Gatsby sites that use [Image Trace](https://using-gatsby-i
 - Uses [`next/image`](https://nextjs.org/docs/api-reference/next/image)
 - Customizable transition delay.
 
+Works out of the box, but if you need more customization you may want to copy the source and import the dependencies.
+
 ## Example
 
 View site:
@@ -22,6 +26,10 @@ Install the component to your project.
 
 ```
 yarn add next-image-trace-loader
+
+# or
+
+npm install next-image-trace-loader
 ```
 
 Update your `next.config.js` to trace images as SVGs.
