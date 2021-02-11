@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "lint": "prettier --write src/index.tsx"
   },
   "repository": {
     "type": "git",
@@ -41,6 +42,7 @@
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "next": "^10.0.6",
+    "prettier": "2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rollup": "^1.29.0",

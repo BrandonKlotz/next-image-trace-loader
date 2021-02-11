@@ -7,3 +7,4 @@ example/
 README.md
 MIT-LICENSE
 tsconfig.json
+.prettierrc.json
