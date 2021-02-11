@@ -23,7 +23,7 @@ function ImageTrace({ src, trace, delay='0.5s', width='auto', height='auto', nex
       <div style={{ ...defaultStyles, ...{ position: 'absolute', opacity: imageLoaded ? 1 : 0 }}}>
         <Image src={src} onLoad={() => setImageLoaded(true)} {...nextImageProps} />
       </div>
-      <div style={{...defaultStyles, ...{ opacity: imageLoaded ? 0 : 1 }}}>
+      <div style={{...defaultStyles, ...{ opacity: imageLoaded ? 0 : 1, pointerEvents: 'none' }}}>
         <Image src={trace} {...nextImageProps} />
       </div>
     </div>
