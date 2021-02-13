@@ -1,19 +1,16 @@
 ![Version](https://img.shields.io/badge/stable-1.1.4-blue)
-[![Downloads](https://img.shields.io/npm/dm/next-image-trace-loader.svg)](http://npm-stat.com/charts.html?package=next-image-trace-loader&from=2015-08-01)
+[![Downloads](https://img.shields.io/npm/dm/next-image-trace-loader.svg)](http://npm-stat.com/charts.html?package=next-image-trace-loader&from=2021-02-02)
 [![MIT License](https://img.shields.io/npm/l/next-image-trace-loader.svg)](http://opensource.org/licenses/MIT)
 
 # Next Image Trace Loader
 
-Display an SVG traced image while your images lazy load on your website.
+Display a SVG traced image while your images lazy load for NextJS projects.
 
-A wrapper of [`image-trace-loader`](https://github.com/EmilTholin/image-trace-loader) for your Next projects.
+A wrapper of [`image-trace-loader`](https://github.com/EmilTholin/image-trace-loader) and [`next/image`](https://nextjs.org/docs/api-reference/next/image)
 
 Was truly inspired by Gatsby sites that use [Image Trace](https://using-gatsby-image.gatsbyjs.org/traced-svg/) and wanted to achieve the same look in my Next projects.
 
-- Uses [`next/image`](https://nextjs.org/docs/api-reference/next/image)
-- Customizable transition delay.
-
-Works out of the box, but if you need more customization you may want to copy the source and import the dependencies.
+Works out of the box with Next 10, if you need more customization you may want to copy the source and import the dependencies `image-trace-loader`, `file-loader`, and `url-loader`.
 
 ## Example
 
@@ -37,7 +34,7 @@ Update your `next.config.js` to trace images as SVGs.
 ```
 // next.config.js
 
-const moduleConfig = {
+const tracedImages = {
   test: /\.(png|jpe?g|gif|jp2|webp)$/,
   use: [
     {
@@ -48,7 +45,7 @@ const moduleConfig = {
 
 module.exports = {
   webpack: (config, options) => {
-    config.module.rules.push(moduleConfig)
+    config.module.rules.push(tracedImages)
     return config
   }
 }
@@ -91,23 +88,6 @@ export default function Home() {
         height='400px'
         nextImageProps={{layout: 'fill'}}
       />
-    </>
-  )
-}
-```
-
-Adding styling to the image.
-
-```
-import ImageTrace from "next-image-trace-loader"
-import profile from '../public/profile.jpg'
-
-export default function Home() {
-  return (
-    <>
-      <ImageTrace
-        src='/profile.jpg'
-        trace={profile.trace} nextImageProps={{width: 400, height: 400, className: "rounded"}} />
     </>
   )
 }

@@ -1,7 +1,7 @@
 {
   "name": "next-image-trace-loader",
   "version": "1.1.4",
-  "description": "",
+  "description": "Display a SVG traced image while your images lazy load for NextJS projects.",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
